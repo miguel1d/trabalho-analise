@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel do Aluno - SGE</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f4f7fb;
+            color: #1e293b;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background-color: #1d4ed8;
+            color: white;
+            padding: 25px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        header h1 {
+            font-size: 25px;
+        }
+
+        header p {
+            margin-top: 6px;
+            color: #dbeafe;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold;
+        }
+
+        main {
+            width: 84%;
+            max-width: 1100px;
+            margin: 40px auto;
+            flex: 1;
+        }
+
+        .welcome {
+            margin-bottom: 30px;
+        }
+
+        .welcome h2 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .welcome p {
+            color: #64748b;
+        }
+
+        .events-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            gap: 10px;
+        }
+
+        .events-header h2 {
+            font-size: 22px;
+        }
+
+        .event-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .event-card {
+            background-color: white;
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+            border: 1px solid #e2e8f0;
+        }
+
+        .event-date {
+            display: inline-block;
+            background-color: #dbeafe;
+            color: #1d4ed8;
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: bold;
+            margin-bottom: 16px;
+        }
+
+        .event-card h3 {
+            font-size: 19px;
+            margin-bottom: 12px;
+        }
+
+        .event-card p {
+            color: #64748b;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+        .btn {
+            display: inline-block;
+            width: 100%;
+            margin-top: 12px;
+            padding: 12px;
+            background-color: #2563eb;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border: none;
+            border-radius: 7px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #1e40af;
+        }
+
+        footer {
+            background-color: #0f172a;
+            color: #cbd5e1;
+            text-align: center;
+            padding: 22px;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav a {
+                margin-left: 0;
+                margin-right: 15px;
+            }
+
+            main {
+                width: 90%;
+                margin: 28px auto;
+            }
+
+            .welcome h2 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div>
+            <h1>SGE | Eventos</h1>
+            <p>Sistema de Gestão de Eventos</p>
+        </div>
+
+        <nav>
+            <a href="#">Início</a>
+            <a href="#">Eventos</a>
+            <a href="#">Meu perfil</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="welcome">
+            <h2>Painel do Aluno</h2>
+            <p>Bem-vindo! Confira os próximos eventos e faça sua inscrição.</p>
+        </section>
+
+        <section>
+            <div class="events-header">
+                <h2>Próximos Eventos</h2>
+            </div>
+
+            <div class="event-list">
+
+                <article class="event-card">
+                    <span class="event-date">15 de Novembro</span>
+                    <h3>Feira de Tecnologia</h3>
+                    <p>Local: Auditório da escola</p>
+                    <p>Horário: 09h às 12h</p>
+                    <p>Conheça projetos e novidades do mundo da tecnologia.</p>
+                    <a href="#" class="btn">Inscrever-se</a>
+                </article>
+
+                <article class="event-card">
+                    <span class="event-date">20 de Novembro</span>
+                    <h3>Semana Cultural</h3>
+                    <p>Local: Pátio principal</p>
+                    <p>Horário: 13h às 17h</p>
+                    <p>Participe de apresentações, oficinas e atividades culturais.</p>
+                    <a href="#" class="btn">Inscrever-se</a>
+                </article>
+
+                <article class="event-card">
+                    <span class="event-date">28 de Novembro</span>
+                    <h3>Workshop de Inovação</h3>
+                    <p>Local: Laboratório de informática</p>
+                    <p>Horário: 14h às 16h</p>
+                    <p>Aprenda sobre criatividade, inovação e desenvolvimento de ideias.</p>
+                    <a href="#" class="btn">Inscrever-se</a>
+                </article>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Sistema de Gestão de Eventos (SGE).</p>
+        <p>Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
